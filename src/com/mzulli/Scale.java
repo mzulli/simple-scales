@@ -177,17 +177,6 @@ public class Scale {
       }
    }
    
-   //print the full array with pointers converted to notes
-   public void printArray() {
-      for (int i = 0; i < rows; i++){
-         for (int j = 0; j < cols; j++){
-            printNote(i,j);
-            System.out.print(" ");
-         }
-         System.out.println();
-      }
-   }
-   
    //print note
    public void printNote(int noteRow, int noteCol) {
       String target = notes[noteRow][noteCol];
@@ -213,17 +202,5 @@ public class Scale {
       else {
          System.out.print(notes[noteRow][noteCol]);
       }
-   }
-   
-   //get start note
-   public String getStartNote() {
-      return startNote;
-   }    
-   
-   //print tonic
-   public void printTonic() {
-      System.out.println("Your starting note, " + startNote 
-                            + ", was found in row " + tonicRow 
-                            + ", column " + tonicCol + ".");
    }
 }
