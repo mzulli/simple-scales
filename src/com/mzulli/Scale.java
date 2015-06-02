@@ -80,7 +80,7 @@ public class Scale {
    }
     
    //convert starting note to tonic with a row and col index
-   public void setTonic(String target) {
+   protected void setTonic(String target) {
       int i = 0;
       int j = 0;
         
@@ -182,7 +182,6 @@ public class Scale {
       String target = notes[noteRow][noteCol];
       int newRow = 0;
       int newCol = 0;
-      int targetLength = target.length();
       
       //if index contains numbers, turn them into row and col index, 
       //otherwise use passed row and col
@@ -191,7 +190,7 @@ public class Scale {
          
          //if target is more than 2 digits, use last 2 for newCol, 
          //otherwise use last 1
-         if(targetLength > 2) {
+         if(target.length() > 2) {
             newCol = Integer.parseInt(target.substring(1,3));
          }
          else {
